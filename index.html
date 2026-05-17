@@ -3,464 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Craft Mart — Handcrafted Treasures</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description" content="MindBridge — Mental health awareness, education, and 24/7 crisis support. You are not alone. We're here for you." />
+  <title>Mental Health Awareness & Support</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8714A'/%3E%3Ctext y='22' x='6' font-size='18'%3E🧠%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
 
-  <!-- ==============================
-       NAVIGATION
-  ============================== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <span class="logo-icon">◈</span>
-        <span>Craft<em>Mart</em></span>
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Mind<span>Bridge</span></div>
       </a>
+
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#crafts">Crafts</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="#conditions">Mental Health</a></li>
+        <li><a href="#awareness">Awareness</a></li>
         <li><a href="#articles">Articles</a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
 
-  <!-- ==============================
-       HERO / HOME SECTION
-  ============================== -->
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <img
-      class="hero-bg"
-      src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1600&auto=format&fit=crop"
-      alt="Handcrafted ceramic vases"
-    />
-    <div class="hero-content">
-      <p class="hero-eyebrow">Discover · Connect · Create</p>
-      <h1 class="hero-title">Where <em>Handcraft</em><br/>Finds a Home</h1>
-      <p class="hero-subtitle">
-        Browse one-of-a-kind vases, pots, mats &amp; wall art made by skilled artisans near you.
-      </p>
-      <div class="hero-cta">
-        <a href="#crafts" class="btn btn-primary">Explore Crafts</a>
-        <a href="#about" class="btn btn-outline">Our Story</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ==============================
-       CRAFTS / SHOWCASE SECTION
-  ============================== -->
-  <section class="crafts-section" id="crafts">
-    <div class="section-header">
-      <p class="section-eyebrow">Handpicked for You</p>
-      <h2 class="section-title">Featured Crafts</h2>
-      <p class="section-desc">Each piece tells a story — explore our artisan marketplace and find something truly special.</p>
-    </div>
-
-    <!-- Filter Tabs -->
-    <div class="filter-tabs">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="vase">Vases</button>
-      <button class="filter-btn" data-filter="pot">Pots</button>
-      <button class="filter-btn" data-filter="mat">Mats</button>
-      <button class="filter-btn" data-filter="wall">Wall Art</button>
-    </div>
-
-    <div class="crafts-grid">
-
-      <!-- Card 1 — Vase -->
-      <article class="craft-card" data-category="vase">
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612196808214-b40e27e0e0e5?w=600&auto=format&fit=crop" alt="Terracotta Vase" />
-          <span class="card-badge">Vase</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="vendor-name"><i class="fa-solid fa-user-circle"></i> Amara Crafts</span>
-            <span class="item-price">UGX 45,000</span>
-          </div>
-          <h3 class="item-name">Sun-Fired Terracotta Vase</h3>
-          <p class="item-desc">Hand-shaped from local clay, glazed with a honey-amber finish that glows in natural light.</p>
-          <button class="btn btn-contact">Contact Vendor</button>
-        </div>
-      </article>
-
-      <!-- Card 2 — Pot -->
-      <article class="craft-card" data-category="pot">
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&auto=format&fit=crop" alt="Clay Pot" />
-          <span class="card-badge">Pot</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="vendor-name"><i class="fa-solid fa-user-circle"></i> Kisumu Pottery</span>
-            <span class="item-price">UGX 32,000</span>
-          </div>
-          <h3 class="item-name">Heritage Clay Cooking Pot</h3>
-          <p class="item-desc">Traditional cooking pot fired in an open kiln — adds authentic earthy flavour to every dish.</p>
-          <button class="btn btn-contact">Contact Vendor</button>
-        </div>
-      </article>
-
-      <!-- Card 3 — Mat -->
-      <article class="craft-card" data-category="mat">
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?w=600&auto=format&fit=crop" alt="Woven Mat" />
-          <span class="card-badge">Mat</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="vendor-name"><i class="fa-solid fa-user-circle"></i> Weave Studio UG</span>
-            <span class="item-price">UGX 28,000</span>
-          </div>
-          <h3 class="item-name">Raffia Woven Floor Mat</h3>
-          <p class="item-desc">Intricately woven using sun-dried raffia with geometric Ugandan patterns. 90 × 60 cm.</p>
-          <button class="btn btn-contact">Contact Vendor</button>
-        </div>
-      </article>
-
-      <!-- Card 4 — Wall Art -->
-      <article class="craft-card" data-category="wall">
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?w=600&auto=format&fit=crop" alt="Wall Decoration" />
-          <span class="card-badge">Wall Art</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="vendor-name"><i class="fa-solid fa-user-circle"></i> Nakawa Art Hub</span>
-            <span class="item-price">UGX 75,000</span>
-          </div>
-          <h3 class="item-name">Batik Canvas Wall Panel</h3>
-          <p class="item-desc">Hand-painted batik on stretched canvas, bold warm tones perfect for any living space.</p>
-          <button class="btn btn-contact">Contact Vendor</button>
-        </div>
-      </article>
-
-      <!-- Card 5 — Vase -->
-      <article class="craft-card" data-category="vase">
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=600&auto=format&fit=crop" alt="White Ceramic Vase" />
-          <span class="card-badge">Vase</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="vendor-name"><i class="fa-solid fa-user-circle"></i> Pure Clay Co.</span>
-            <span class="item-price">UGX 60,000</span>
-          </div>
-          <h3 class="item-name">Minimalist Ceramic Vase</h3>
-          <p class="item-desc">Wheel-thrown stoneware with a raw matte exterior and smooth glazed interior. Timeless silhouette.</p>
-          <button class="btn btn-contact">Contact Vendor</button>
-        </div>
-      </article>
-
-      <!-- Card 6 — Wall Art -->
-      <article class="craft-card" data-category="wall">
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=600&auto=format&fit=crop" alt="Macrame Wall Hanging" />
-          <span class="card-badge">Wall Art</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="vendor-name"><i class="fa-solid fa-user-circle"></i> Fibre & Knot Studio</span>
-            <span class="item-price">UGX 55,000</span>
-          </div>
-          <h3 class="item-name">Macramé Wall Hanging</h3>
-          <p class="item-desc">Cotton rope knotted into a flowing boho tapestry — adds warmth and texture to bare walls.</p>
-          <button class="btn btn-contact">Contact Vendor</button>
-        </div>
-      </article>
-
-    </div><!-- .crafts-grid -->
-
-    <div class="section-cta">
-      <a href="#" class="btn btn-primary">View All Crafts</a>
-    </div>
-  </section>
-
-  <!-- ==============================
-       ABOUT US SECTION
-  ============================== -->
-  <section class="about-section" id="about">
-    <div class="about-inner">
-      <div class="about-image-col">
-        <div class="about-img-stack">
-          <img class="about-img-main" src="https://images.unsplash.com/photo-1604685285728-d9b8bb58e6fe?w=700&auto=format&fit=crop" alt="Artisan at work" />
-          <img class="about-img-accent" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&auto=format&fit=crop" alt="Craft pottery" />
-          <div class="about-stat-bubble">
-            <strong>500+</strong>
-            <span>Artisans</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-text-col">
-        <p class="section-eyebrow">Our Story</p>
-        <h2 class="section-title">Celebrating the <em>Art of Making</em></h2>
-        <p>Craft Mart was born from a simple belief: that every hand-crafted object holds the spirit of its maker. We set out to build a marketplace that bridges the gap between talented local artisans and people who appreciate the beauty of the hand-made.</p>
-        <p>From sun-fired clay pots in Jinja to woven mats from Masaka, we are proud to showcase the richness of Ugandan craft tradition — and to help artisans earn a fair, dignified income from their skills.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <strong>500+</strong>
-            <span>Artisans</span>
-          </div>
-          <div class="stat">
-            <strong>2,400+</strong>
-            <span>Products Listed</span>
-          </div>
-          <div class="stat">
-            <strong>18</strong>
-            <span>Districts Covered</span>
-          </div>
-        </div>
-        <a href="#contact" class="btn btn-primary">Work With Us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================
-       ARTICLES / BLOG SECTION
-  ============================== -->
-  <section class="articles-section" id="articles">
-    <div class="section-header">
-      <p class="section-eyebrow">From the Studio</p>
-      <h2 class="section-title">Articles &amp; Stories</h2>
-      <p class="section-desc">Craft techniques, artisan spotlights and design inspiration — straight from the community.</p>
-    </div>
-
-    <div class="articles-grid">
-
-      <article class="article-card article-card--featured">
-        <div class="article-img-wrap">
-          <img src="https://images.unsplash.com/photo-1607734834519-d8576ae60ea6?w=900&auto=format&fit=crop" alt="Potter at wheel" />
-        </div>
-        <div class="article-body">
-          <span class="article-tag">Craft Guide</span>
-          <h3>The Ancient Art of Kiln Firing: A Beginner's Guide</h3>
-          <p>Discover how local artisans transform raw red clay into durable, beautiful ceramics using centuries-old techniques passed down through generations.</p>
-          <a href="#" class="article-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="article-card">
-        <div class="article-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop" alt="Weaving" />
-        </div>
-        <div class="article-body">
-          <span class="article-tag">Artisan Spotlight</span>
-          <h3>Meet Grace: The Mat Weaver from Masaka</h3>
-          <p>Grace Nakato has been weaving raffia mats since she was twelve. Today she sells to buyers across three continents.</p>
-          <a href="#" class="article-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="article-card">
-        <div class="article-img-wrap">
-          <img src="https://images.unsplash.com/photo-1547480053-7d174f67b557?w=600&auto=format&fit=crop" alt="Wall art paints" />
-        </div>
-        <div class="article-body">
-          <span class="article-tag">Décor Tips</span>
-          <h3>5 Ways to Style Handmade Wall Art in Modern Homes</h3>
-          <p>Handcrafted wall panels and macramé need not clash with contemporary interiors — here's how to blend the two seamlessly.</p>
-          <a href="#" class="article-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ==============================
-       CONTACT US SECTION
-  ============================== -->
-  <section class="contact-section" id="contact">
-    <div class="contact-inner">
-      <div class="contact-info">
-        <p class="section-eyebrow">Get in Touch</p>
-        <h2 class="section-title">We'd Love to <em>Hear from You</em></h2>
-        <p>Whether you're an artisan wanting to list your work, a buyer with questions, or a journalist writing about Ugandan craft — our team is here for you.</p>
-
-        <ul class="contact-details">
-          <li>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Plot 14, Craft Village Road, Kampala, Uganda</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <span>+256 700 123 456</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-envelope"></i>
-            <span>hello@craftmart.ug</span>
-          </li>
-          <li>
-            <i class="fa-brands fa-instagram"></i>
-            <span>@craftmart.ug</span>
-          </li>
-        </ul>
-      </div>
-
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Grace Nakato" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="grace@example.com" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" placeholder="I'd like to list my crafts…" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Tell us how we can help you…" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ==============================
-       FOOTER
-  ============================== -->
-  <footer class="footer" id="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo footer-logo">
-          <span class="logo-icon">◈</span>
-          <span>Craft<em>Mart</em></span>
+      <div class="nav-cta">
+        <a href="https://wa.me/256700000000" target="_blank" class="emergency-pill">
+          <span class="pulse-dot"></span>
+          24/7 Crisis Line
         </a>
-        <p>Uganda's home for handcrafted art. Empowering artisans, enriching homes.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#contact" class="btn-primary" style="padding: 11px 22px; font-size: 0.9rem;">Talk to Us</a>
+      </div>
+
+      <div class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" id="mobileClose">✕</span>
+  <a href="#conditions" onclick="closeMobileMenu()">Mental Health</a>
+  <a href="#awareness" onclick="closeMobileMenu()">Awareness</a>
+  <a href="#articles" onclick="closeMobileMenu()">Articles</a>
+  <a href="#about" onclick="closeMobileMenu()">About Us</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="https://wa.me/256700000000" target="_blank" style="color: #25D366;"> Chat on WhatsApp</a>
+</div>
+
+
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img
+      src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=1600&q=80&fit=crop"
+      alt="Peaceful sunrise representing hope"
+      class="hero-bg-img"
+    />
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+           &nbsp; Your mental health matters
+        </div>
+
+        <h1 class="hero-title">
+          You Don't Have to Face This <em>Alone</em>
+        </h1>
+
+        <p class="hero-desc">
+          MindBridge is a safe, judgment-free space offering mental health education, awareness, and round-the-clock crisis support. Whatever you're going through — we see you, and we're here.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+             &nbsp; Get Support Today
+          </a>
+          <a href="#conditions" class="btn-secondary">
+             &nbsp; Learn More
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">970M+</div>
+            <div class="stat-label">People globally live with a mental health condition</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Crisis support always available</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Free</div>
+            <div class="stat-label">All our services are free</div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-links-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#crafts">All Crafts</a></li>
-          <li><a href="#crafts">Vases</a></li>
-          <li><a href="#crafts">Pots</a></li>
-          <li><a href="#crafts">Mats</a></li>
-          <li><a href="#crafts">Wall Art</a></li>
-        </ul>
-      </div>
+      <div class="hero-visual">
+        <div class="hero-img-frame">
+          <img
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&fit=crop&crop=faces"
+            alt="A woman with a peaceful smile"
+          />
+        </div>
 
-      <div class="footer-links-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#articles">Blog & Articles</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Vendor Sign Up</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
+        <div class="hero-card-float hero-card-1">
+          <div class="card-icon">💚</div>
+          <div class="card-title">You Are Enough</div>
+          <div class="card-sub">Healing takes courage</div>
+        </div>
 
-      <div class="footer-newsletter">
-        <h4>Join Our Community</h4>
-        <p>Get artisan stories, new listings &amp; craft tips delivered to your inbox.</p>
-        <form class="newsletter-form" onsubmit="return false;">
-          <input type="email" placeholder="Your email address" />
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
+        <div class="hero-card-float hero-card-2">
+          <div class="card-icon"></div>
+          <div class="card-title">Crisis Line Active</div>
+          <div class="card-sub">24 hours, 7 days a week</div>
+        </div>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 CraftMart Uganda. All rights reserved.</p>
-      <p>Made with <i class="fa-solid fa-heart"></i> for Ugandan artisans.</p>
-    </div>
-  </footer>
-
-  <!-- ==============================
-       SCRIPTS
-  ============================== -->
-  <script>
-    /* Sticky navbar */
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    /* Mobile nav toggle */
-    const navToggle = document.getElementById('navToggle');
-    const navLinks  = document.querySelector('.nav-links');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navToggle.classList.toggle('active');
-    });
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('active');
-      });
-    });
-
-    /* Craft filter */
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const craftCards  = document.querySelectorAll('.craft-card');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const f = btn.dataset.filter;
-        craftCards.forEach(card => {
-          const show = f === 'all' || card.dataset.category === f;
-          card.style.display = show ? 'flex' : 'none';
-        });
-      });
-    });
-
-    /* Contact Vendor modal-like alert */
-    document.querySelectorAll('.btn-contact').forEach(btn => {
-      btn.addEventListener('click', function () {
-        const card = this.closest('.craft-card');
-        const vendor = card.querySelector('.vendor-name').textContent.trim();
-        const item   = card.querySelector('.item-name').textContent.trim();
-        alert(`You're about to contact:\n${vendor}\n\nItem: ${item}\n\nThis will redirect you to their contact page in a full implementation.`);
-      });
-    });
-
-    /* Contact form submit */
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-      this.reset();
-    });
-
-    /* Scroll reveal */
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.craft-card, .article-card, .about-inner, .contact-inner').forEach(el => {
-      el.classList.add('reveal');
-      observer.observe(el);
-    });
-  </script>
-
+  </div>
+</section>
 </body>
 </html>
