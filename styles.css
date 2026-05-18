@@ -386,9 +386,9 @@ p { font-size: 1.05rem; line-height: 1.8; }
   color: var(--text-mid);
 }
 
-/* ============================================
+/* 
    HERO SECTION
-   ============================================ */
+    */
 .hero {
   min-height: 100vh;
   position: relative;
@@ -595,3 +595,376 @@ p { font-size: 1.05rem; line-height: 1.8; }
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateY(0); }
  }
+
+
+
+ /*
+   STATISTICS 
+    */
+.stats-banner {
+  background: var(--deep-brown);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8714A' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  position: relative;
+}
+
+.stat-block {
+  text-align: center;
+  padding: 24px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.stat-block:last-child { border-right: none; }
+
+.stat-big {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--terracotta-light);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* 
+   MENTAL HEALTH CONDITIONS
+    */
+.conditions {
+  padding: 100px 0;
+  background: var(--warm-cream);
+}
+
+.conditions-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.conditions-header .section-subtitle {
+  margin: 0 auto;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.condition-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  border: 1px solid var(--border-warm);
+  cursor: pointer;
+}
+
+.condition-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-warm);
+}
+
+.condition-card.featured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.condition-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.condition-card.featured .condition-img {
+  height: 100%;
+  aspect-ratio: unset;
+}
+
+.condition-body {
+  padding: 28px;
+}
+
+.condition-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.tag-orange { background: rgba(200,113,74,0.1); color: var(--terracotta); }
+.tag-green { background: rgba(107,140,110,0.1); color: var(--sage-dark); }
+.tag-gold { background: rgba(212,168,67,0.12); color: #8B6914; }
+.tag-blue { background: rgba(74,130,200,0.1); color: #2E6FB5; }
+.tag-purple { background: rgba(130,74,200,0.1); color: #6B35B5; }
+
+.condition-title {
+  color: var(--deep-brown);
+  margin-bottom: 10px;
+}
+
+.condition-desc {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.condition-signs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.sign-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+.sign-item::before {
+  content: '✦';
+  color: var(--terracotta);
+  font-size: 0.65rem;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  transition: var(--transition);
+}
+
+.read-more:hover { gap: 10px; }
+
+/* 
+   CRISIS / EMERGENCY CTA
+    */
+.crisis-section {
+  background: linear-gradient(135deg, #1A0F05 0%, #2C1A0E 50%, #3D2614 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.crisis-section::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,113,74,0.15), transparent);
+  top: -200px;
+  right: -100px;
+}
+
+.crisis-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+
+.crisis-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(76, 175, 80, 0.15);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #81C784;
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.crisis-title {
+  color: var(--white);
+  margin-bottom: 16px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.crisis-desc {
+  color: rgba(255,255,255,0.65);
+  font-size: 1.05rem;
+  max-width: 500px;
+}
+
+.crisis-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #25D366;
+  color: white;
+  padding: 18px 28px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+  min-width: 260px;
+}
+
+.whatsapp-btn:hover {
+  background: #1DA855;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.whatsapp-text strong { display: block; font-size: 1.05rem; }
+.whatsapp-text span { font-size: 0.8rem; opacity: 0.85; font-weight: 400; }
+
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 18px 28px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.call-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-2px);
+}
+
+/* 
+   AWARENESS / EDUCATION SECTION
+   */
+.awareness {
+  padding: 100px 0;
+  background: var(--warm-sand);
+}
+
+.awareness-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.awareness-imgs {
+  position: relative;
+}
+
+.awareness-img-main {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow-warm);
+}
+
+.awareness-img-accent {
+  position: absolute;
+  width: 55%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 20px;
+  bottom: -30px;
+  right: -30px;
+  border: 6px solid var(--warm-sand);
+  box-shadow: var(--shadow-warm);
+}
+
+.awareness-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.step-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.step-num {
+  width: 44px;
+  height: 44px;
+  background: var(--terracotta);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--deep-brown);
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
